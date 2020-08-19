@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Mutt House </title>
+    <link href="../static/css/styles.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+<nav>
+    <div class="navbar">
+        <img class="nav_logo" src="../static/img/img_logo.png">
+        <a class="current-page" href="{{ url_for('dashboard') }}">
+            Home
+        </a>
+    </div>
+</nav>
+
+<div class="list-group col-centered col-lg-5 col-md-6 col-sm-8 col-xs-10">
+    <div style="font-size:30px;text-align:center" class="list-group-item active"><strong> Add Adoption -
+        Search Result </strong>
+    </div>
+    <div style="padding:0px;text-align:center" class="dog-detail">
+
+        <h2 style="background-color:LightGray;"> You're adding adoption for dog#: {{ dog_id }}</h2>
+        <h2> Following result is searched based on your input: <u>{{ search }}</u></h2>
+
+        <div class="list-group col-centered col-lg-5 col-md-6 col-sm-8 col-xs-10">
+            <div style="padding:0px;text-align:center" class="list-dog">
+                <div class=page>
+                    <table>
+                        <thead>
+                        <th>Email</th>
+                        <th>Applicant's Name</th>
+                        <th>Co-applicant's Name</th>
+                        <th>Street</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Zip Code</th>
+                        <th>Cell Number</th>
+                        </thead>
+
+                        <tbody>
+                        {% for row in search_result %}
+                            <tr>
+                                <td class="email">{{ row[0] }}</td>
+                                <td class="applicant-name">{{ row[12] }}</td>
+                                <td class="co-applicant-name">{{ row[13] }}</td>
+                                <td class="street">{{ row[9] }}</td>
+                                <td class="city">{{ row[8] }}</td>
+                                <td class="state">{{ row[7] }}</td>
+                                <td class="zip">{{ row[10] }}</td>
+                                <td class="cell">{{ row[11] }}</td>
+                                <td>
+                                    <a href="{{ url_for('adoption_result_select') }}?dog_id={{ dog_id }}&email={{ row[0] }}">
+                                        <button class="btn active">Select</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                    <p style="text_align:center;"><strong>{{ search_result_num }} applicant(s) found!</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

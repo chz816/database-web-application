@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Mutt House </title>
+    <link href="../static/css/styles.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="../static/js/dashboard.js"></script>
+</head>
+
+
+<body>
+
+
+<nav>
+    <div class="navbar">
+        <img class="nav_logo" src="../static/img/img_logo.png">
+        <a class="current-page" href="{{ url_for('dashboard') }}">
+            Home
+        </a>
+    </div>
+</nav>
+
+
+                 
+<div class="list-group col-centered col-lg-5 col-md-6 col-sm-8 col-xs-10">
+    <h2> Animal Control Report </h2>
+        <div style="padding:0px;text-align:center" class="list-dog"> 
+
+        <table>
+            <tr class="header">
+                <th>Year </th>
+                <th>Month </th>
+                <th>Dogs Surrendered by AC</th>
+                <th>Long-stay Dogs<sup>*</sup></th>
+                <th>Expense for Long-stay Dogs ($)<sup>**</sup></th>
+
+            </tr>
+
+            {% for row in AC_report %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    
+                    {% if row[2] > 0   %}
+                        <td>
+                            <a href="{{ url_for('animal_control_report_drilldown',rpt_type = 0, year = row[0], month = row[1] )}}">{{ row[2] }}</a></td>
+                    {% else %}
+                        <td>{{ row[2] }}</td>
+                    {% endif %}
+                    
+                    {% if row[5] > 0  %}
+                        <td>
+                            <a href="{{ url_for('animal_control_report_drilldown',rpt_type = 1, year = row[0], month = row[1] ) }}">{{ row[5] }}</a></td>
+                    {% else %}
+                        <td>{{ row[5] }}</td>
+                    {% endif %}
+                        
+                    
+                    <td>{{ row[4] }}</td>
+                    
+                             
+                </tr>
+            {% endfor %}        
+    
+
+</table>
+<br>
+<br>
+<br>
+<p style="text-align:center;"><strong> *: The count of any dogs adopted during that month that had spent in the rescue 60 days or more.</strong></p>
+<p stype="text_align:center;"><strong> **: All expenses related to "Long-stay Dogs".</strong></p>
+
+</div>
+</div>
+
+</body>
+</html>

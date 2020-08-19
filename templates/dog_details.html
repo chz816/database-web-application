@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Mutt House </title>
+    <link href="../static/css/styles.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="../static/js/dashboard.js"></script>
+</head>
+
+<body>
+<nav>
+    <div class="navbar">
+        <img class="nav_logo" src="../static/img/img_logo.png">
+        <a class="current-page" href="{{ url_for('dashboard') }}">
+            Home
+        </a>
+    </div>
+</nav>
+
+{% block content %}
+<div class="container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+
+    {% block page_content %}{% endblock %}
+</div>
+{% endblock %}
+
+<div>
+
+    <div class="list-group col-centered col-lg-5 col-md-6 col-sm-8 col-xs-10">
+        <div style="font-size:30px;text-align:center" class="list-group-item active"><strong> Dog Details </strong>
+        </div>
+        <div style="padding:0px;text-align:center" class="dog-detail">
+            <h2>You're reviewing the detailed information for dog#: {{ dog_id }}</h2>
+
+            <table id="dogDetails">
+                <!--
+                    # extract information from dog_info
+                    name:                           dog_details_list[0]
+                    breed:                          dog_details_list[1]
+                    sex:                            dog_details_list[2]
+                    alteration:                     dog_details_list[3]
+                    age:                            dog_details_list[4]
+                    description:                    dog_details_list[5]
+                    microchipID:                    dog_details_list[6]
+                    surrender_date:                 dog_details_list[7]
+                    surrender_reason:               dog_details_list[8]
+                    surrender_by_animal_control:    dog_details_list[9]
+                    total_expense:                  dog_details_list[10]
+                -->
+
+                <tr class="header">
+                    <th>Attribute</th>
+                    <th>Information</th>
+                </tr>
+
+                <tr class="id">
+                    <th> Dog ID</th>
+                    <td> {{ dog_id }}
+                    </td>
+                </tr>
+
+                <tr class="name">
+                    <th> Name</th>
+                    <td> {{ dog_details_list[0] }} </td>
+                </tr>
+
+                <!--
+                Breed: if and only if "unknown" or "mixed" are chosen, the breed of the animal cam ne updated in the future
+                -->
+                <tr class="breed">
+                    <th> Breed</th>
+                    <td contenteditable='true'
+                        data-old_value='{{ dog_details_list[1] }}'> {{ dog_details_list[1] }} </td>
+                </tr>
+
+                <!--
+                Sex: if "Unknown", this can be updated, but other values cannot.
+                -->
+                <tr class="sex">
+                    <th> Sex</th>
+                    <td contenteditable='true'> {{ dog_details_list[2] }} </td>
+                </tr>
+
+
+                <!--
+                Alteration: this can only be updated after surrender if the dog was unaltered when it is surrendered.
+                -->
+                <tr class="alteration">
+                    <th> Alteration Status</th>
+                    <td contenteditable='true'> {{ dog_details_list[3] }} </td>
+                </tr>
+
+
+                <tr class="age">
+                    <th> Age</th>
+                    <td> {{ dog_details_list[4] }} </td>
+                </tr>
+
+                <tr class="description">
+                    <th> Description</th>
+                    <td> {{ dog_details_list[5] }} </td>
+                </tr>
+
+                <!--
+                Microchip ID: editable
+                -->
+                <tr class="microchip">
+                    <th> Microchip ID</th>
+                    <td contenteditable='true'> {{ dog_details_list[6] }} </td>
+                </tr>
+
+                <tr class="surrender_date">
+                    <th> Surrender Date</th>
+                    <td> {{ dog_details_list[7] }} </td>
+                </tr>
+
+                <tr class="surrender_reason">
+                    <th> Surrender Reason</th>
+                    <td> {{ dog_details_list[8] }} </td>
+                </tr>
+
+                <tr class="surrender_by_animal_control">
+                    <th> Surrender by Animal Control</th>
+                    <td> {{ dog_details_list[9] }} </td>
+                </tr>
+
+                <tr class="total_expense">
+                    <th> Total Expense</th>
+                    <td> {{ dog_details_list[10] }} </td>
+                </tr>
+
+                </tr>
+
+            </table>
+
+            <!--
+            Breed: if "Unknown" or "Mixed", this can be updated
+            -->
+            {% if dog_details_list[1] == 'Unknown' or dog_details_list[1] == 'Mixed' %}
+                <a href="{{ url_for('update_breed') }}?dog_id={{ dog_id }}">
+                    <button class="btn active"> Update Breed</button>
+                </a>
+            {% endif %}
+
+            <!--
+            Sex: if "unknown", this can be updated
+            -->
+            {% if dog_details_list[2] == 'unknown' %}
+                <a href="{{ url_for('update_sex') }}?dog_id={{ dog_id }}">
+                    <button class="btn active"> Update Sex</button>
+                </a>
+            {% endif %}
+
+            <!--
+            Alteration: if 0, this can be updated
+            -->
+            {% if dog_details_list[3] == 0 %}
+                <a href="{{ url_for('update_alteration') }}?dog_id={{ dog_id }}">
+                    <button class="btn active"> Update Alteration Status</button>
+                </a>
+            {% endif %}
+
+            <!--
+            MicrochipID: if None, this can be updated
+            -->
+            {% if dog_details_list[6] == None or dog_details_list[6] == '' %}
+                <a href="{{ url_for('update_microchip') }}?dog_id={{ dog_id }}">
+                    <button class="btn active"> Update Microchip ID</button>
+                </a>
+            {% endif %}
+
+            <h2>You're reviewing all expenses related to dog#: {{ dog_id }}</h2>
+
+            <h3>totally there are {{ dog_expense_num }} transaction(s)</h3>
+
+            <!--
+                    # extract information from dog_expense
+                    dogID:                  dog_expense[i][0]
+                    date:                   dog_expense[i][1]
+                    vendor:                 dog_expense[i][2]
+                    amount:                 dog_expense[i][3]
+                    optional_description:   dog_expense[i][4]
+                -->
+
+            <table id="dogDetailsExpense">
+                <tr class="header">
+                    <th>Date</th>
+                    <th>Vendor</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                </tr>
+
+                {% for row in dog_expense %}
+                    <tr>
+                        <td class="date">{{ row[1] }}</td>
+                        <td class="vendor">{{ row[2] }}</td>
+                        <td class="amount">{{ row[3] }}</td>
+                        <td class="description">{{ row[4] }}</td>
+                    </tr>
+                {% endfor %}
+
+            </table>
+
+            <a href="{{ url_for('add_expense') }}?dog_id={{ dog_id }}">
+                <button class="btn active"> Add New Expense</button>
+            </a>
+
+            {% if admin_flag > 0 and dog_eligible4adoption_flag > 0 %}
+                <a href="{{ url_for('add_adoption_search') }}?dog_id={{ dog_id }}">
+                    <button class="btn active"> Add Adoption</button>
+                </a>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+<hr>
+<h3>Note: You can see the "Add Adoption" button if and only if this dog is available for
+    adoption.</h3>
+<ul>
+    <li style="font-size:11pt">The dog needs to have a microchip.
+    </li>
+    <li style="font-size:11pt">The dog needs to be neutered/spayed.
+    </li>
+</ul>
+<hr>
+
+<hr>
+<h3>Note: Some attributes on this web page is <u>editable</u>.</h3>
+<ul>
+    <li style="font-size:11pt">If the current breed is "Unknown" or "Mixed", you can edit the breed info by
+        using the "Update Breed"
+        button.
+    </li>
+    <li style="font-size:11pt">If the current sex is "unknown", you can edit the sexual info by using the
+        "Update Sex" button.
+    </li>
+    <li style="font-size:11pt">If the current alteration status is 0, you can edit the alteration info by
+        using the "Update Alteration
+        Status" button.
+    </li>
+    <li style="font-size:11pt">If the current Microchip ID doesn't recorded, you can edit the Microchip ID
+        info by using the "Update
+        Microchip ID" button.
+    </li>
+</ul>
+<hr>
+
+</body>
+</html>

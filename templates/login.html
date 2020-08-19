@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Mutt House </title>
+        <link href="../static/css/styles.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div class="navbar">
+                <img class ="nav_logo" src="../static/img/img_logo.png">
+            </div>
+        </nav>
+        
+        <h2>Welcome to Mutt House</h2>
+
+        <form method="post" id="login_form">
+            <div class="imgcontainer">
+                <img src="../static/img/img_avatar.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname">
+                    <b>Username</b>
+                </label>
+                <input type="text" placeholder="Enter Username" name="uname" id="login_uname" required>
+
+                <label for="psw">
+                    <b>Password</b>
+                </label>
+
+                <input type="password" placeholder="Enter Password" name="psw" id="login_psw" required>                  
+                <input type="submit" id="login_button" value="Submit">
+                
+            </div>
+        </form>
+
+        <div id="log_info"></div>
+
+        <script src="../static/js/login.js"></script>
+
+        <div class="footer">
+            <p>Copyright © 2020 All right reserved</p>
+        </div>
+    </body>
+</html>

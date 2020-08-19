@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Mutt House </title>
+        <link href="../static/css/styles.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="../static/js/dashboard.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div class="navbar">
+                <img class="nav_logo" src="../static/img/img_logo.png">
+                <a class="current-page" href="{{ url_for('dashboard') }}">
+                    Home
+                </a>
+            </div>
+        </nav>
+             
+        <h2>Expense Analysis</h2>
+        <div style="padding:0px;text-align:center" class="list-dog"> 
+        
+            <table>
+        
+    
+                <tr class = "header">
+                    <th>Vendor</th>
+                    <th>Expense Amount</th>
+                </tr>
+        
+                {% for row in Expense_report %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                
+                </tr>
+                {% endfor %}
+     
+            </table>
+        </div>
+    </body>
+</html>
+    

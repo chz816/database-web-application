@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Mutt House </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    
+    <body>
+
+        
+        <nav>
+            <div class="navbar">  
+                <img class="nav_logo" src="{{ url_for('static', filename='img/img_logo.png') }}">
+                <a class="current-page" href="{{ url_for('dashboard') }}">
+                 Home   
+                </a>
+            </div>
+        </nav>
+                          
+       
+            <h2>Drill-down Report </h2> 
+            <div style="padding:0px;text-align:center" class="dog-detail">
+                {%if rpt_type %}
+                    <h3>You are reviewing dogs adopted in {{year}}(year) {{month}}(month) that have been in the rescue for 60 days or more.</h3>
+                {%else%}
+                    <h3>You are reviewing dogs surrendered by Animal Control Department in {{year}}(year) {{month}}(month).</h3>
+                {%endif%}    
+                            
+            <table>
+            
+
+                <tr class="header">
+                    <th>Dog ID</th>
+                    <th>Breed</th>
+                    <th>Sex</th>
+                    <th>Alteration Status</th>
+                    <th>Microchip ID</th>
+                    <th>Surrender Date</th>
+                    {% if rpt_type %}
+                        <th>Days in the Rescue</th>
+                    {% endif %}
+                </tr>
+                
+                {% for row in Drill_down  %}
+                <tr>
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+                    <td>{{row[3]}}</td>
+                    <td>{{row[4]}}</td>
+                    <td>{{row[5]}}</td>
+                    {% if  rpt_type  %}
+                        <td>{{row[6]}}</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </table>             
+        </div>
+    </body>
+</html>

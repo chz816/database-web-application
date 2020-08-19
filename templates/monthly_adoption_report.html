@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Mutt House </title>
+        <link href="../static/css/styles.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="../static/js/dashboard.js"></script>
+    </head>
+
+    <body>
+    
+    
+        <nav>
+            <div class="navbar">
+                <img class="nav_logo" src="../static/img/img_logo.png">
+                <a class="current-page" href="{{ url_for('dashboard') }}">
+                    Home
+                </a>
+            </div>
+        </nav>
+      
+ 
+ 
+<div class="list-group col-centered col-lg-5 col-md-6 col-sm-8 col-xs-10">
+    <h2> Monthly Adoption Report </h2>
+        <div style="padding:0px;text-align:center" class="list-dog"> 
+            <h>
+            <table>
+ 
+                <tr class="header">
+                    <th>Year</th>
+                    <th>Month</th>
+                    <th>Breed</th>
+                    <th>Dogs Surrendered</th>
+                    <th>Dogs Adopted</th>
+                    <th>Expenses for Adopted Dogs</th>
+                    <th>Adoption Fees</th>
+                    <th>Net Profit</th>
+    
+                </tr>
+    
+    
+        
+                {% for row in Mthly_report %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{{ row[4] }}</td>      
+                        <td>{{ row[5] }}</td> 
+                        <td>{{ row[6] }}</td> 
+                        <td>{{ row[7] }}</td>
+    
+                    </tr>
+                {% endfor %}        
+    
+    
+        </table>
+   </div>
+</div>
+
+
+    </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Mutt House </title>
+    <link href="../static/css/styles.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+<nav>
+    <div class="navbar">
+        <img class="nav_logo" src="../static/img/img_logo.png">
+        <a class="current-page" href="{{ url_for('dashboard') }}">
+            Home
+        </a>
+    </div>
+</nav>
+
+<div class="list-group col-centered col-lg-5 col-md-6 col-sm-8 col-xs-10">
+    <div style="font-size:30px;text-align:center" class="list-group-item active"><strong> Add Adoption -
+        Search Result </strong>
+    </div>
+    <div style="padding:0px;text-align:center" class="dog-detail">
+
+
+        <h2 style="background-color:LightGray;"> You're adding adoption for dog#: {{ dog_id }}</h2>
+        <h2> Following result is the most recent adoption application for adopter: <u>{{ email }}</u></h2>
+
+        <div class="list-group col-centered col-lg-5 col-md-6 col-sm-8 col-xs-10">
+            <div style="padding:0px;text-align:center" class="list-dog">
+                <div class=page>
+                    <table>
+                        <thead>
+                        <th>Application #</th>
+                        <th>Date</th>
+                        </thead>
+
+                        <tbody>
+
+                        <tr>
+                            <td class="application_num">{{ most_recent_application_num }}</td>
+                            <td class="Date">{{ most_recent_application_date }}</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <hr>
+
+        <h2 style="font-family:verdana">The adoption fee for dog# {{ dog_id }}
+            should be: <u>${{ adoption_fee }}</u></h2>
+
+        <hr>
+        <hr>
+
+        <h2 style="font-family:verdana;color:indianred">If you approve this adoption, please enter the adoption date below:</h2>
+
+        <!--
+        <textarea style="text-align:center;font-size:18pt;color:indianred" rows="1" cols="50">If you approve this adoption, please enter the adoption date below:</textarea>
+        -->
+
+        <form method="POST" id="approve_adoption_form">
+
+            <div class="container">
+                <label for="edate">
+                    <b>Adoption Date (Format: YYYY-MM-DD)</b>
+                </label>
+                <input type="text" placeholder="Enter Date" name="adoption_date" id="adoption_date">
+                <input type="submit" id="login_button" value="Submit"
+                       onClick="return confirm('Are you sure you want to submit this adoption?');">
+            </div>
+            <script>
+                $("#approve_adoption_form").submit(function (event) {
+                    event.preventDefault();
+                    console.log("In approve_adoption_form submit button");
+                    var date = $("#adoption_date").val();
+                    var dog_id = {{ dog_id }};
+                    var adoption_fee = {{ adoption_fee }};
+                    var application_num =
+                    {{ most_recent_application_num }}
+                    var data_params = {
+                        "date": date,
+                        "dog_id": dog_id,
+                        "adoption_fee": adoption_fee,
+                        "application_num": application_num
+                    };
+                    $('#approve_adoption_form').html("");
+                    $.ajax({
+                        url: "/approveAdoption",
+                        type: "POST",
+                        contentType: "application/json;charset=UTF-8",
+                        data: JSON.stringify(data_params),
+                        dataType: 'json',
+                        success: function (response) {
+                            console.log(response);
+                            if (response.redirect) {
+                                window.location.href = response.redirect + "?dog_id=" + response.dog_id;
+                            }
+                            if (response.error) {
+                                $("#log_info").append("<b>ERROR: </b> <text>" + response.error + "</text>");
+                                $("#login_uname").val('');
+                                $("#login_psw").val('');
+                            }
+                        },
+                        complete: function (xhr, textStatus) {
+                            console.log("AJAX Request complete -> ", xhr, " -> ", textStatus);
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+                    });
+                });
+            </script>
+        </form>
+    </div>
+</div>
+</body>
+</html>

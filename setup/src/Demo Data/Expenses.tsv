@@ -1,0 +1,161 @@
+dog_id	vendor_name	date_expense	amount_expense	description
+2	Petco	2019-01-13	74.02	Purina Pro Plan Focus Adult Sensitive Skin & Stomach Salmon & Rice Formula Dry Dog Food
+7	Dr Smith	2019-01-28	105.07	medicine
+9	Dr Hudson	2019-01-26	144.22	Exploratory celiotomy - ventral midline 
+9	Kahoots Pet	2019-02-16	60.56	Blue Buffalo Homestyle Recipe Chicken Dinner with Garden Vegetables & Brown Rice Canned Dog Food
+11	Dr Rozenman	2019-02-12	278.95	
+11	Dr Smith	2019-02-27	191.42	medical procedure
+12	Canine Learning Centers	2019-03-08	22.43	Top Paw Spiky Ball Toy
+12	Dr Arnold	2019-04-09	277.37	Exploratory celiotomy - left flank
+12	Dr Rozenman	2019-02-03	125.21	
+14	Dr Brown	2019-02-18	124.43	vaccination
+18	Arrieros Pet Shop	2019-11-08	0.05	Trixie Activity Flip Board Activity Strategy Game Dog Toy
+18	Arrieros Pet Shop	2019-12-10	8.59	Chuckit! Indoor Ball Dog Toy
+18	Canine Learning Centers	2019-10-16	0.26	Iams ProActive Health Adult MiniChunks Dry Dog Food
+18	Decker's Dog and Cat	2019-12-28	14.90	American Journey Salmon & Sweet Potato Recipe Grain-Free Dry Dog Food
+18	Dr Arnold	2020-04-05	194.96	fractures
+18	Dr Brown	2019-06-29	288.54	bleeding
+18	Dr Wilson	2019-08-09	86.07	
+18	Kahoots Pet	2019-05-11	73.41	
+18	Pet Kingdom	2019-03-15	19.67	Top Paw Spiky Ball Toy
+18	Pet Kingdom	2019-04-11	24.66	JW Pet Hol-ee Roller Dog Toy
+18	Petco	2019-06-21	40.46	Rachael Ray Nutrish Natural Chicken & Veggies Recipe Dry Dog Food
+18	Petco	2020-05-23	5.77	Top Paw Spiky Ball Toy
+25	Dr Jones	2019-03-17	95.29	fractures
+31	Dr Arnold	2019-04-19	71.40	surgery
+33	Pawerica Pet Store	2019-04-09	6.79	Nylabone DuraChew Textured Ring Flavor Medley Dog Chew Toy
+34	Petco	2019-04-21	44.29	Taste of the Wild High Prairie Grain-Free Dry Dog Food
+39	Dr Smith	2019-04-11	108.73	fractures
+42	Dr Jones	2019-05-11	255.55	
+42	Dr Wilson	2019-05-03	3.67	medicine
+43	Dr Hudson	2019-05-05	258.80	medicine
+45	Dr Rozenman	2019-04-20	282.50	Exploratory celiotomy - ventral midline 
+47	Kahoots Pet	2019-05-02	9.40	Chuckit! Indoor Ball Dog Toy
+49	Dr Brown	2019-05-21	1.57	
+49	Unleashed by Petco	2019-06-13	9.92	Top Paw Spiky Ball Toy
+50	Dr Rozenman	2019-05-18	164.10	surgery
+55	Arrieros Pet Shop	2019-05-17	8.10	Nylabone DuraChew Textured Ring Flavor Medley Dog Chew Toy
+58	Petco	2019-05-28	30.22	Hill's Science Diet Adult Sensitive Stomach & Skin Chicken Recipe Dry Dog Food
+58	Unleashed by Petco	2019-06-05	47.45	Hill's Science Diet Adult Sensitive Stomach & Skin Chicken Recipe Dry Dog Food
+63	Dr Arnold	2019-06-10	59.89	
+66	Dr Smith	2019-06-15	38.66	physical
+67	Dr Jones	2019-08-26	90.19	surgery
+67	Unleashed by Petco	2019-07-10	0.14	Top Paw Spiky Ball Toy
+68	Arrieros Pet Shop	2019-06-19	30.67	American Journey Salmon & Sweet Potato Recipe Grain-Free Dry Dog Food
+70	Arrieros Pet Shop	2019-07-14	60.46	SmartBones SmartSticks Peanut Butter Chews Dog Treats Food
+70	Pawerica Pet Store	2019-07-23	45.72	Taste of the Wild High Prairie Grain-Free Dry Dog Food
+70	Pet Group Inc	2019-06-28	19.34	JW Pet Hol-ee Roller Dog Toy
+72	Dr Hudson	2019-07-15	208.33	Exploratory celiotomy - left flank
+72	Petco	2019-09-26	14.57	Blue Buffalo Homestyle Recipe Chicken Dinner with Garden Vegetables & Brown Rice Canned Dog Food
+72	TagWorks	2019-08-11	20.52	American Journey Salmon & Sweet Potato Recipe Grain-Free Dry Dog Food
+72	Unleashed by Petco	2019-07-06	24.69	Nylabone DuraChew Textured Ring Flavor Medley Dog Chew Toy
+72	Unleashed by Petco	2019-09-15	11.04	Blue Buffalo Homestyle Recipe Chicken Dinner with Garden Vegetables & Brown Rice Canned Dog Food
+74	Pawerica Pet Store	2019-07-15	24.55	Blue Buffalo Homestyle Recipe Chicken Dinner with Garden Vegetables & Brown Rice Canned Dog Food
+76	Dr Smith	2019-07-28	82.28	Abomasopexy, left flank 
+76	Kahoots Pet	2019-07-25	70.44	Taste of the Wild High Prairie Grain-Free Dry Dog Food
+83	Decker's Dog and Cat	2019-08-02	5.94	JW Pet Hol-ee Roller Dog Toy
+83	Petco	2019-07-29	74.13	
+84	Arrieros Pet Shop	2019-07-24	64.61	
+86	Dr Towers	2019-07-26	117.82	Abomasopexy, left flank 
+86	Petco	2019-09-05	56.08	
+89	Pawerica Pet Store	2019-08-01	5.95	Nylabone Puppy X Bone Dog Toy
+90	Decker's Dog and Cat	2019-09-04	15.77	
+90	Dr Towers	2019-08-12	292.93	
+90	TagWorks	2019-08-04	15.60	Trixie Activity Flip Board Activity Strategy Game Dog Toy
+96	Pawerica Pet Store	2019-08-19	66.58	Taste of the Wild High Prairie Grain-Free Dry Dog Food
+105	Dr Arnold	2019-10-01	257.53	surgery
+106	Dr Wilson	2019-09-11	286.61	fractures
+107	Pet Kingdom	2019-09-11	53.27	Blue Buffalo Homestyle Recipe Chicken Dinner with Garden Vegetables & Brown Rice Canned Dog Food
+108	Dr Brown	2019-09-15	198.62	
+111	Pet Group Inc	2019-09-26	12.84	Trixie Activity Flip Board Activity Strategy Game Dog Toy
+112	Canine Learning Centers	2019-10-29	19.06	Outward Hound HedgehogZ Squeaky Plush Dog Toy
+112	Dr Brown	2019-10-11	265.91	fractures
+112	Dr Hudson	2019-10-03	264.27	Abomasopexy, left flank 
+112	Dr Jones	2019-11-26	122.03	vaccination
+112	Pet Kingdom	2019-12-08	66.04	Taste of the Wild High Prairie Grain-Free Dry Dog Food
+113	Dr Arnold	2019-12-08	290.47	
+113	Dr Brown	2019-10-15	96.82	
+113	Dr Brown	2020-01-20	42.19	Exploratory celiotomy - left flank
+113	Dr Hudson	2020-01-12	250.39	Exploratory celiotomy - ventral midline 
+113	Dr Towers	2019-12-21	253.01	Abomasopexy, left flank 
+113	TagWorks	2020-01-01	5.85	Hill's Science Diet Adult Sensitive Stomach & Skin Chicken Recipe Dry Dog Food
+113	Unleashed by Petco	2019-11-09	6.35	Hill's Science Diet Adult Sensitive Stomach & Skin Chicken Recipe Dry Dog Food
+114	Decker's Dog and Cat	2019-10-13	55.36	KONG Easy Treat Dog Treat - Bacon & Cheese Food
+117	Dr Wilson	2019-10-15	193.74	physical
+123	Canine Learning Centers	2019-10-26	60.83	Taste of the Wild High Prairie Grain-Free Dry Dog Food
+124	Dr Brown	2019-11-11	36.65	surgery
+124	Dr Hudson	2019-11-04	83.35	surgery
+125	Canine Learning Centers	2019-11-03	15.82	JW Pet Hol-ee Roller Dog Toy
+127	Dr Hudson	2019-11-07	82.54	Abomasopexy, left flank 
+129	Dr Jones	2019-11-12	29.29	medical procedure
+130	Dr Jones	2019-12-09	206.15	medical procedure
+130	Dr Smith	2019-11-19	279.09	Exploratory celiotomy - left flank
+131	Unleashed by Petco	2019-11-16	36.74	Iams ProActive Health Adult MiniChunks Dry Dog Food
+133	Canine Learning Centers	2019-12-18	13.11	
+133	Pet Kingdom	2019-11-25	3.23	Nylabone Puppy X Bone Dog Toy
+133	Unleashed by Petco	2019-11-21	13.82	
+134	Dr Brown	2019-11-20	296.56	medicine
+134	Dr Hudson	2019-11-18	117.61	Abomasopexy, left flank 
+138	Dr Hudson	2019-11-22	234.90	physical
+139	Canine Learning Centers	2020-01-01	22.68	Nylabone DuraChew Textured Ring Flavor Medley Dog Chew Toy
+139	Decker's Dog and Cat	2019-12-29	62.07	Hill's Science Diet Adult Sensitive Stomach & Skin Chicken Recipe Dry Dog Food
+139	Dr Arnold	2019-11-30	193.36	medicine
+139	Dr Arnold	2019-12-21	63.31	Exploratory celiotomy - left flank
+139	Dr Brown	2019-11-26	94.93	
+139	Dr Hudson	2020-03-07	125.15	fractures
+139	Kahoots Pet	2020-01-27	22.70	
+139	Kahoots Pet	2020-02-12	27.10	Blue Buffalo Life Protection Formula Adult Chicken & Brown Rice Recipe Dry Dog Food
+139	Petco	2020-01-14	35.53	Iams ProActive Health Adult MiniChunks Dry Dog Food
+139	Unleashed by Petco	2020-04-06	17.10	Nylabone DuraChew Textured Ring Flavor Medley Dog Chew Toy
+140	Dr Smith	2019-12-01	249.58	vaccination
+143	Pawerica Pet Store	2019-12-11	14.53	Nylabone Puppy X Bone Dog Toy
+146	Decker's Dog and Cat	2019-12-12	43.32	Taste of the Wild High Prairie Grain-Free Dry Dog Food
+146	Kahoots Pet	2019-12-22	66.05	Blue Buffalo Life Protection Formula Adult Chicken & Brown Rice Recipe Dry Dog Food
+153	Dr Jones	2019-12-26	188.23	medicine
+157	Dr Brown	2020-01-01	82.72	Abomasopexy, left flank 
+159	TagWorks	2020-01-08	21.47	Top Paw Spiky Ball Toy
+160	Dr Jones	2020-01-14	231.99	surgery
+160	Dr Jones	2020-01-26	242.42	medicine
+160	Unleashed by Petco	2020-02-17	65.56	Blue Buffalo Life Protection Formula Adult Chicken & Brown Rice Recipe Dry Dog Food
+166	Arrieros Pet Shop	2020-03-11	15.54	JW Pet Hol-ee Roller Dog Toy
+166	Dr Hudson	2020-04-05	30.16	Exploratory celiotomy - left flank
+166	Dr Jones	2020-03-15	117.23	Exploratory celiotomy - left flank
+166	Petco	2020-03-26	3.99	Nylabone DuraChew Textured Ring Flavor Medley Dog Chew Toy
+166	Petco	2020-03-31	1.05	KONG Easy Treat Dog Treat - Bacon & Cheese Food
+171	Pawerica Pet Store	2020-03-01	20.69	SmartBones SmartSticks Peanut Butter Chews Dog Treats Food
+172	Canine Learning Centers	2020-03-06	44.29	
+172	Dr Smith	2020-03-24	217.15	fractures
+174	Pet Group Inc	2020-03-05	12.24	
+176	Canine Learning Centers	2020-03-28	35.83	SmartBones SmartSticks Peanut Butter Chews Dog Treats Food
+176	Dr Smith	2020-03-08	37.18	Exploratory celiotomy - left flank
+176	TagWorks	2020-04-28	7.39	Top Paw Spiky Ball Toy
+177	Pet Kingdom	2020-03-18	20.21	
+179	Dr Rozenman	2020-03-20	159.78	surgery
+183	Dr Jones	2020-03-31	27.53	physical
+183	Unleashed by Petco	2020-04-02	3.80	Chuckit! Indoor Ball Dog Toy
+184	Pet Kingdom	2020-03-27	10.40	KONG AirDog Tennis Ball Squeaker Dog Toy
+185	Dr Hudson	2020-04-23	166.54	physical
+185	Dr Jones	2020-05-18	208.53	
+185	Pet Group Inc	2020-04-09	20.14	Chuckit! Indoor Ball Dog Toy
+187	Dr Arnold	2020-04-15	68.54	
+187	Dr Rozenman	2020-05-06	114.41	vaccination
+188	Canine Learning Centers	2020-05-05	57.37	Rachael Ray Nutrish Natural Chicken & Veggies Recipe Dry Dog Food
+188	Dr Brown	2020-04-16	178.98	fractures
+188	Dr Wilson	2020-04-22	147.02	surgery
+188	Dr Wilson	2020-05-25	179.66	bleeding
+188	Petco	2020-05-15	6.61	Purina Pro Plan Focus Adult Sensitive Skin & Stomach Salmon & Rice Formula Dry Dog Food
+189	Canine Learning Centers	2020-04-24	21.49	KONG Easy Treat Dog Treat - Bacon & Cheese Food
+190	Dr Brown	2020-04-12	290.32	medicine
+190	Dr Wilson	2020-04-27	279.14	medicine
+190	Pet Kingdom	2020-05-17	11.82	
+193	Arrieros Pet Shop	2020-04-29	3.32	
+193	Dr Wilson	2020-04-22	169.85	bleeding
+193	Pawerica Pet Store	2020-05-11	1.88	Hill's Science Diet Adult Sensitive Stomach & Skin Chicken Recipe Dry Dog Food
+193	Pet Kingdom	2020-04-19	7.24	JW Pet Hol-ee Roller Dog Toy
+196	Dr Towers	2020-04-23	153.49	surgery
+199	Dr Wilson	2020-05-14	181.53	bleeding
+200	TagWorks	2020-05-11	49.34	SmartBones SmartSticks Peanut Butter Chews Dog Treats Food
+202	Decker's Dog and Cat	2020-05-15	11.16	JW Pet Hol-ee Roller Dog Toy
+204	Dr Wilson	2020-05-25	175.96	medical procedure
+205	Dr Jones	2020-05-29	211.12	bleeding
+208	Decker's Dog and Cat	2020-06-01	1.36	KONG AirDog Tennis Ball Squeaker Dog Toy

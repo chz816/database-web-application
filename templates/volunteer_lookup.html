@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Mutt House </title>
+        <link href="../static/css/styles.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="../static/js/dashboard.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div class="navbar">
+                <img class="nav_logo" src="../static/img/img_logo.png">
+                <a class="current-page" href="{{ url_for('dashboard') }}">
+                    Home
+                </a>
+            </div>
+        </nav>
+        
+
+    <h2>Volunteer Lookup</h2>
+
+    <form action = {{url_for('volunteer_lookup_result')}} method="POST">
+
+        <div class="form-group">
+            <label >
+                <b>Name</b>
+            </label> 
+            <input type="text" class="form_control"  placeholder="Enter Name" id="uname" name="uname">
+        </div>
+	    <input type="submit" id="login_button" value="Search">    
+    </form>
+
+
+
+    <div class="footer">
+         <p>Copyright © 2020 All right reserved</p>  
+    </div>
+</body>
+</html>

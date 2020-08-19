@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Mutt House </title>
+        <link href="../static/css/styles.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="../static/js/dashboard.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div class="navbar">
+                <img class="nav_logo" src="../static/img/img_logo.png">
+                <a class="current-page" href="{{ url_for('dashboard') }}">
+                    Home
+                </a>
+            </div>
+        </nav>
+
+        <div class="list-group col-centered col-lg-5 col-md-6 col-sm-8 col-xs-10">
+            <h2>Volunteer Lookup Results</h2>
+            <div style="padding:0px;text-align:center" class="list-dog"> 
+                <div class=page>
+                    <table>
+                        
+                            <tr>
+                                {% for t in title %}
+                                    <th>{{t}}</th>
+                                {% endfor %}
+                            </tr>
+                      
+                        
+                        
+                            {% for d in data %}
+                                <tr>
+                                    <td>{{ d[0] }}</td>
+                                    <td>{{ d[1] }}</td>
+                                    <td>{{ d[2] }}</td>
+                                    <td>{{ d[3] }}</td>    
+                                </tr>
+                            {% endfor %}
+                            
+                    </table>
+                    <p style="font-family:verdana; font-size:150%;" ><strong>{{num_volunteer}} volunteer(s) found!</strong></p>
+                </div> 
+            </div>
+ 
+    </body>
+</html>
+        

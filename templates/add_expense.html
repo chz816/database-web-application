@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Mutt House </title>
+        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div class="navbar">
+                <img class="nav_logo" src="{{ url_for('static', filename='img/img_logo.png') }}">
+                <a class="current-page" href="{{ url_for('logout') }}">
+                    Log out
+                </a>
+            </div>
+        </nav>
+
+
+        <h2>Add Expense</h2>
+        <h3>You're adding expense for dog #: {{ dog_id }}</h3>
+
+        <form method="POST" id="expense_form">
+
+            <div class="container">
+                <label for="edate">
+                    <b>Date (Format: YYYY-MM-DD)</b>
+                </label>
+                <input type="text" placeholder="Enter Date" name="edate" id="expense_date" required>
+
+                <label for="evendor">
+                    <b>Name of Vendor</b>
+                </label>
+
+                <input type="text" placeholder="Enter Name of Vendor" name="evendor" id="expense_vendor" required>
+
+                <label for="eamount">
+                    <b>Amount</b>
+                </label>
+                <input type="text" placeholder="Enter Amount" name="eamount" id="expense_amount" required>
+
+                <label for="edescription">
+                    <b>Description</b>
+                </label>
+                <input type="text" placeholder="Enter Description (Optional)" name="edescription" id="expense_description">
+
+                <input type="submit" id="login_button" value="Submit">
+            </div>
+        </form>
+        <script src="{{ url_for('static', filename='js/add_expense.js') }}"></script>
+        <div id="expense_info"></div>
+        <div class="footer">
+            <p>Copyright © 2020 All right reserved</p>
+        </div>
+    </body>
+</html>
