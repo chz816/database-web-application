@@ -1,5 +1,5 @@
 # Database-Driven Web Applications with Flask
-This is the repo for our designed database driven by a Flask based web application. It corresponds to the class project for Gatech OMSCS CS6400. In this project, we build a dynamic web application aimed to help our client to better manage her shelter.
+This is the repo for our designed database driven by a Flask based web application. In this project, we build a dynamic web application aimed to help our client to better manage her shelter.
 
 We achieve the following:
 - Create a Flask-based website driven by MySQL database
