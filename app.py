@@ -1,5 +1,5 @@
 from flask import Flask, Response, session, render_template, request, jsonify, flash, redirect, url_for
-from flaskext.mysql import MySQL
+from flaskext.mysqldb import MySQL
 from dataaccessor import *
 import datetime
 import json
